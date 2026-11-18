@@ -54,7 +54,7 @@ Todos los servicios del Frontend deben consumir exactamente las rutas expuestas 
 
 ---
 
-## 2. Servicios de Franklin Victor (Consultas en Ventas y Reportes/Alertas)
+## 2. Servicios de William Dominic (Consultas en Ventas y Reportes/Alertas)
 
 ### A. `src/services/consultas.service.js` (Conecta con Anthony)
 - `api.get('/stock/search?q=...&category_id=...&branch_id=...&package_type=...&voltage=...&only_available=...')`

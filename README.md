@@ -35,7 +35,7 @@ npm run dev        # http://localhost:5173 (las peticiones a /api van a http://l
 
 ## Responsables (según el plan)
 - **Vilca Carpio Carlos Daniel**: UI/UX y módulo de almacén
-- **Quispe Huaman Franklin Victor**: requisitos, módulo de ventas y reportes
+- **Tito Monteagudo William Dominic**: requisitos, módulo de ventas y reportes (reasignado desde Quispe Huaman Franklin Victor, retirado del proyecto)
 
 ## Flujo de trabajo
 - `main`: versión estable (solo se modifica con Pull Request).
