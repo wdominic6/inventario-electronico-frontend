@@ -1,13 +1,15 @@
-# Aislamiento Estricto de Equipo en Frontend (Carlos vs. Franklin)
+# Aislamiento Estricto de Equipo en Frontend (Carlos vs. William)
 
-Para garantizar que **Vilca Carpio Carlos Daniel** y **Quispe Huaman Franklin Victor** trabajen en paralelo con asistencia de IA sin provocar conflictos de `git merge`, se establecen las siguientes fronteras obligatorias de archivos.
+Para garantizar que **Vilca Carpio Carlos Daniel** y **Tito Monteagudo William Dominic** trabajen en paralelo con asistencia de IA sin provocar conflictos de `git merge`, se establecen las siguientes fronteras obligatorias de archivos.
+
+> **Cambio de equipo (noviembre 2026)**: Quispe Huaman Franklin Victor se retiró del proyecto. Su dominio (Ventas/Consultas y Reportes/Alertas) fue reasignado a **Tito Monteagudo William Dominic**.
 
 ## 1. Archivos Compartidos Congelados / Modulares
 - **`src/services/api.js`**: **INMUTABLE**. Contiene `api` (`get`, `post`, `put`, `patch`, `delete`), `tokenStorage` y `ApiError`. Ningún integrante debe modificarlo; cada módulo importa `api` desde `@/services/api` en su propio archivo `*.service.js`.
 - **`src/router/index.js`**: Actúa únicamente como ensamblador importando dos arreglos de rutas separados:
   ```js
   import almacenRoutes from './almacen.routes'             // Exclusivo de Carlos Daniel
-  import ventasReportesRoutes from './ventas-reportes.routes' // Exclusivo de Franklin Victor
+  import ventasReportesRoutes from './ventas-reportes.routes' // Exclusivo de William Dominic
   ```
 
 ---
@@ -41,7 +43,7 @@ Para garantizar que **Vilca Carpio Carlos Daniel** y **Quispe Huaman Franklin Vi
 
 ---
 
-### B. Dominio de Quispe Huaman Franklin Victor
+### B. Dominio de Tito Monteagudo William Dominic (reasignado desde Quispe Huaman Franklin Victor)
 *(Rol: Requisitos, Módulo de Ventas/Consultas y Módulo de Reportes/Alertas – Semanas 6, 7, 12, 14)*
 
 **Archivos y carpetas permitidos para crear/modificar:**
@@ -57,7 +59,7 @@ Para garantizar que **Vilca Carpio Carlos Daniel** y **Quispe Huaman Franklin Vi
   - `src/views/reportes/*` (`DashboardGerencialView.vue`, `AlertasStockView.vue`, `RotacionInventarioView.vue`, `KardexProductoView.vue`)
   - `src/components/reportes/*` (tarjetas KPI, tabla de alertas de stock mínimo, gráficos de rotación y kardex)
 
-**Archivos prohibidos cuando el agente asiste a Franklin:**
+**Archivos prohibidos cuando el agente asiste a William en el frontend:**
 - `src/router/almacen.routes.js`
 - `src/layouts/*` y `src/components/ui/*` (puede importarlos y usarlos, pero no modificarlos sin coordinar con Carlos)
 - `src/services/auth.service.js`, `src/services/catalogo.service.js`, `src/services/movimientos.service.js`

@@ -1,16 +1,18 @@
 ---
-name: flujo-franklin-ventas-reportes
+name: flujo-william-ventas-reportes
 description: >-
-  Guía de implementación para Quispe Huaman Franklin Victor en el frontend
+  Guía de implementación para Tito Monteagudo William Dominic en el frontend
   (Buscador avanzado de stock multi-sucursal en tiempo real para Ventas,
   disponibilidad cruzada por estantería, Dashboard gerencial, Alertas de
   bajo stock y Reportes de rotación/Kardex). Úsalo cuando se trabaje en
   consultas de ventas, alertas o reportes en Vue 3.
 ---
 
-# Flujo de Desarrollo Frontend – Franklin Victor (Consultas en Ventas y Reportes/Alertas)
+# Flujo de Desarrollo Frontend – William Dominic (Consultas en Ventas y Reportes/Alertas)
 
-Este skill guía el trabajo de **Quispe Huaman Franklin Victor** asegurando que no se modifiquen los archivos de Carlos Daniel y que se cumpla el contrato de endpoints con Anthony Junior.
+> Módulos reasignados desde Quispe Huaman Franklin Victor (retirado del proyecto, noviembre 2026).
+
+Este skill guía el trabajo de **Tito Monteagudo William Dominic** en el frontend asegurando que no se modifiquen los archivos de Carlos Daniel y que se cumpla el contrato de endpoints con Anthony Junior.
 
 ## Reglas Previas
 1. Verifica que **solo** registrarás rutas en `src/router/ventas-reportes.routes.js`.

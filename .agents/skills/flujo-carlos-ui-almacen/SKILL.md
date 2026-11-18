@@ -9,11 +9,11 @@ description: >-
 
 # Flujo de Desarrollo Frontend – Carlos Daniel (UI/UX, Seguridad y Almacén)
 
-Este skill guía el trabajo de **Vilca Carpio Carlos Daniel** asegurando que no se modifiquen los archivos de Franklin Victor y que se cumpla el contrato de endpoints con William Dominic.
+Este skill guía el trabajo de **Vilca Carpio Carlos Daniel** asegurando que no se modifiquen los archivos de William Dominic (Ventas y Reportes) y que se cumpla el contrato de endpoints con William Dominic.
 
 ## Reglas Previas
 1. Verifica que **solo** registrarás rutas en `src/router/almacen.routes.js`.
-2. **Nunca modifiques `src/services/api.js`** ni los archivos de `consultas` o `reportes` de Franklin.
+2. **Nunca modifiques `src/services/api.js`** ni los archivos de `consultas` o `reportes` de William.
 3. Revisa los payloads exactos en `.agents/rules/contrato-endpoints.md` (Módulos 1, 2 y 3).
 
 ## Pasos para Implementar una Funcionalidad de Almacén o Seguridad
