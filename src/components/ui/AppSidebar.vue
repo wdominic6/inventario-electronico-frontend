@@ -18,6 +18,12 @@ const links=[
  {label:'Historial',to:'/almacen/historial',roles:['admin','almacen']},
  {label:'Usuarios',to:'/usuarios',roles:['admin']},
 {label:'Auditoría',to:'/usuarios/auditoria',roles:['admin']},
+{label:'Consulta de Stock',to:'/consultas/stock',roles:['admin','almacen','ventas']},
+{label:'Disponibilidad por Sucursal',to:'/consultas/disponibilidad',roles:['admin','almacen','ventas']},
+{label:'Dashboard Gerencial',to:'/reportes/dashboard',roles:['admin']},
+{label:'Alertas de Stock',to:'/reportes/alertas',roles:['admin','almacen','ventas']},
+{label:'Rotación ABC',to:'/reportes/rotacion',roles:['admin']},
+{label:'Kardex',to:'/reportes/kardex',roles:['admin','almacen']},
 ]
 const visible=computed(()=>links.filter(x=>x.roles.includes(auth.user?.role)))
 </script>

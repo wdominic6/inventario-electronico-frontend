@@ -11,7 +11,8 @@ import AlmacenView from '@/views/movimientos/AlmacenView.vue'
 import MovimientoFormView from '@/views/movimientos/MovimientoFormView.vue'
 import HistorialView from '@/views/movimientos/HistorialView.vue'
 
-const all = ['admin', 'almacen', 'ventas'], warehouse = ['admin', 'almacen'], admin = ['admin']
+const all = ['admin', 'almacen', 'ventas']
+const warehouse = ['admin', 'almacen']
 const protect = (roles) => async () => {
   const auth = useAuthStore()
   if (!tokenStorage.get() || !(await auth.restore())) return { path: '/login' }

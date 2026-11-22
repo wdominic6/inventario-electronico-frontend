@@ -1,5 +1,8 @@
 <script setup>
-const props=defineProps({open:Boolean,title:{type:String,default:'Formulario'}})
+defineProps({
+  open: Boolean,
+  title: String
+})
 const emit=defineEmits(['close'])
 </script>
 <template>
