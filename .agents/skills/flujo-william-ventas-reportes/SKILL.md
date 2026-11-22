@@ -22,11 +22,11 @@ Este skill guía el trabajo de **Tito Monteagudo William Dominic** en el fronten
 ## Pasos para Implementar Consultas de Ventas o Reportes/Alertas
 
 1. **Crear o Actualizar el Servicio (`src/services/`)**:
-   - Usa exclusivamente `src/services/consultas.service.js` y `src/services/reportes.service.js`.
+   - Usa exclusivamente `src/services/consultas.service.js`, `src/services/reportes.service.js` y `src/services/usuarios.service.js`.
    - Importa `api` desde `@/services/api` y construye los query params con `URLSearchParams` (ej. `/stock/search?${params.toString()}`).
 
 2. **Crear o Actualizar el Store en Pinia (`src/stores/`)**:
-   - Usa `src/stores/consultas.store.js` o `src/stores/reportes.store.js`.
+   - Usa `src/stores/consultas.store.js`, `src/stores/reportes.store.js` o `src/stores/usuarios.store.js`.
    - Permite refrescar los datos al instante (o mediante polling ligero configurable) para garantizar visibilidad de stock en tiempo real entre sucursales.
 
 3. **Construir las Vistas y Componentes (`src/views/` y `src/components/`)**:

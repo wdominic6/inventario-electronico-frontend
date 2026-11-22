@@ -55,10 +55,28 @@ const navLinks = [
     label: 'Kardex de Producto',
     moduleBadge: 'Kardex',
   },
+  {
+    name: 'usuarios.index',
+    path: '/usuarios',
+    label: 'Usuarios RBAC',
+    moduleBadge: 'Admin',
+  },
+  {
+    name: 'usuarios.auditoria',
+    path: '/usuarios/auditoria',
+    label: 'Auditoría',
+    moduleBadge: 'Admin',
+  },
 ]
 
 function isActive(item) {
-  return route.name === item.name || route.path.startsWith(item.path)
+  if (route.name === item.name || route.path === item.path) {
+    return true
+  }
+  if (item.path === '/usuarios') {
+    return false
+  }
+  return route.path.startsWith(`${item.path}/`)
 }
 </script>
 

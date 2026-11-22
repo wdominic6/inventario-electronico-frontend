@@ -21,10 +21,10 @@ docker compose -f ../infra/compose.yaml exec frontend npm run build
 ## Regla de Oro de Trabajo en Equipo (Aislamiento Estricto)
 Este repositorio es desarrollado por **dos integrantes** con fronteras estrictas de archivos (detalladas en `.agents/rules/aislamiento-equipo-frontend.md`):
 1. **Vilca Carpio Carlos Daniel** (*UI/UX, Seguridad y Módulo de Almacén*):
-   - Responsable del Layout general, componentes UI base, Login/Usuarios/Auditoría, CRUD de Catálogo Técnico/Sucursales/Ubicaciones y Registro de Movimientos Logísticos (Entradas, Salidas y Traslados).
+   - Responsable del Layout general, componentes UI base, Login/Autenticación, CRUD de Catálogo Técnico/Sucursales/Ubicaciones y Registro de Movimientos Logísticos (Entradas, Salidas y Traslados).
    - Sus rutas van exclusivamente en `src/router/almacen.routes.js`.
-2. **Tito Monteagudo William Dominic** (*Requisitos, Módulo de Ventas y Reportes* — reasignado desde Quispe Huaman Franklin Victor, retirado del proyecto):
-   - Responsable del Módulo de Consultas en Tiempo Real para Ventas (buscador con filtros técnicos y disponibilidad cruzada entre sucursales) y del Módulo de Reportes y Alertas de Desabastecimiento (Dashboard gerencial, stock mínimo, rotación y Kardex).
+2. **Tito Monteagudo William Dominic** (*Requisitos, Módulo de Ventas, Reportes y Usuarios/Auditoría* — reasignado desde Quispe Huaman Franklin Victor y coordinado con Carlos para `frontend#7`):
+   - Responsable del Módulo de Consultas en Tiempo Real para Ventas (buscador con filtros técnicos y disponibilidad cruzada entre sucursales), del Módulo de Reportes y Alertas de Desabastecimiento (Dashboard gerencial, stock mínimo, rotación y Kardex) y del Módulo de Gestión de Usuarios y Auditoría (`RF08`).
    - Sus rutas van exclusivamente en `src/router/ventas-reportes.routes.js`.
 
 > **IMPORTANTE PARA EL AGENTE**:
