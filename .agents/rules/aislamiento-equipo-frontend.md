@@ -22,10 +22,10 @@ Para garantizar que **Vilca Carpio Carlos Daniel** y **Tito Monteagudo William D
 **Archivos y carpetas permitidos para crear/modificar:**
 - **Rutas**: `src/router/almacen.routes.js`
 - **Layout y UI Base**: `src/layouts/*` (`MainLayout.vue`, `AuthLayout.vue`), `src/components/ui/*` (botones, modales, tablas base, badges), `src/assets/*`
-- **Módulo 1 (Auth, Usuarios y Auditoría)**:
-  - `src/services/auth.service.js`, `src/services/usuarios.service.js`
-  - `src/stores/auth.store.js`, `src/stores/usuarios.store.js`
-  - `src/views/auth/*`, `src/views/usuarios/*`
+- **Módulo 1A (Autenticación y Sesión)**:
+  - `src/services/auth.service.js`
+  - `src/stores/auth.store.js`
+  - `src/views/auth/*`
 - **Módulo 2 (Catálogo Técnico, Categorías, Sucursales y Ubicaciones en Estantería)**:
   - `src/services/catalogo.service.js`
   - `src/stores/catalogo.store.js`
@@ -37,17 +37,22 @@ Para garantizar que **Vilca Carpio Carlos Daniel** y **Tito Monteagudo William D
 
 **Archivos prohibidos cuando el agente asiste a Carlos:**
 - `src/router/ventas-reportes.routes.js`
-- `src/services/consultas.service.js` y `src/services/reportes.service.js`
-- `src/stores/consultas.store.js` y `src/stores/reportes.store.js`
-- `src/views/consultas/*`, `src/components/consultas/*`, `src/views/reportes/*`, `src/components/reportes/*`
+- `src/services/consultas.service.js`, `src/services/reportes.service.js` y `src/services/usuarios.service.js`
+- `src/stores/consultas.store.js`, `src/stores/reportes.store.js` y `src/stores/usuarios.store.js`
+- `src/views/consultas/*`, `src/components/consultas/*`, `src/views/reportes/*`, `src/components/reportes/*`, `src/views/usuarios/*`, `src/components/usuarios/*`
 
 ---
 
-### B. Dominio de Tito Monteagudo William Dominic (reasignado desde Quispe Huaman Franklin Victor)
-*(Rol: Requisitos, Módulo de Ventas/Consultas y Módulo de Reportes/Alertas – Semanas 6, 7, 12, 14)*
+### B. Dominio de Tito Monteagudo William Dominic (Ventas/Consultas, Reportes/Alertas y Usuarios/Auditoría)
+*(Rol: Requisitos, Módulo de Ventas/Consultas, Módulo de Reportes/Alertas y Gestión de Usuarios/Auditoría `frontend#7`)*
 
 **Archivos y carpetas permitidos para crear/modificar:**
 - **Rutas**: `src/router/ventas-reportes.routes.js`
+- **Módulo 1B (Gestión de Usuarios y Bitácora de Auditoría – RF08, `frontend#7`)**:
+  - `src/services/usuarios.service.js`
+  - `src/stores/usuarios.store.js`
+  - `src/views/usuarios/*` (`UsuariosGestionView.vue`, `AuditoriaLogsView.vue`)
+  - `src/components/usuarios/*` (`UsuarioFormModal.vue`, `TablaUsuarios.vue`, `TablaLogsAuditoria.vue`)
 - **Módulo 4 (Consultas en Tiempo Real y Disponibilidad Cruzada para Ventas)**:
   - `src/services/consultas.service.js`
   - `src/stores/consultas.store.js`
@@ -64,4 +69,4 @@ Para garantizar que **Vilca Carpio Carlos Daniel** y **Tito Monteagudo William D
 - `src/layouts/*` y `src/components/ui/*` (puede importarlos y usarlos, pero no modificarlos sin coordinar con Carlos)
 - `src/services/auth.service.js`, `src/services/catalogo.service.js`, `src/services/movimientos.service.js`
 - `src/stores/auth.store.js`, `src/stores/catalogo.store.js`, `src/stores/movimientos.store.js`
-- `src/views/auth/*`, `src/views/usuarios/*`, `src/views/catalogo/*`, `src/views/movimientos/*`
+- `src/views/auth/*`, `src/views/catalogo/*`, `src/views/movimientos/*`

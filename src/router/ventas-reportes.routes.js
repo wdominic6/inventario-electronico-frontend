@@ -1,5 +1,6 @@
 // Rutas exclusivas de Tito Monteagudo William Dominic (reasignadas desde Quispe Huaman Franklin Victor)
-// Módulos: Consultas de Stock Multi-Sucursal (Ventas) y Reportes/Alertas de Desabastecimiento.
+// Módulos: Consultas de Stock Multi-Sucursal (Ventas), Reportes/Alertas de Desabastecimiento
+// y Gestión de Usuarios / Auditoría RBAC (RF08).
 // Ver: .agents/rules/aislamiento-equipo-frontend.md
 
 export default [
@@ -61,6 +62,26 @@ export default [
       title: 'Kardex Cronológico de Producto',
       requiresAuth: true,
       roles: ['admin', 'almacen'],
+    },
+  },
+  {
+    path: '/usuarios',
+    name: 'usuarios.index',
+    component: () => import('@/views/usuarios/UsuariosGestionView.vue'),
+    meta: {
+      title: 'Gestión de Usuarios y Roles (RBAC)',
+      requiresAuth: true,
+      roles: ['admin'],
+    },
+  },
+  {
+    path: '/usuarios/auditoria',
+    name: 'usuarios.auditoria',
+    component: () => import('@/views/usuarios/AuditoriaLogsView.vue'),
+    meta: {
+      title: 'Bitácora de Auditoría del Sistema',
+      requiresAuth: true,
+      roles: ['admin'],
     },
   },
 ]

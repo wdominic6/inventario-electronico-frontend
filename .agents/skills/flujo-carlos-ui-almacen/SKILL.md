@@ -19,7 +19,7 @@ Este skill guía el trabajo de **Vilca Carpio Carlos Daniel** asegurando que no 
 ## Pasos para Implementar una Funcionalidad de Almacén o Seguridad
 
 1. **Crear o Actualizar el Servicio (`src/services/`)**:
-   - Usa `auth.service.js`, `usuarios.service.js`, `catalogo.service.js` o `movimientos.service.js`.
+   - Usa `auth.service.js`, `catalogo.service.js` o `movimientos.service.js`.
    - Importa `api` desde `@/services/api` (recuerda no anteponer `/api` a la ruta porque `api.js` ya lo incluye).
 
 2. **Crear o Actualizar el Store en Pinia (`src/stores/`)**:

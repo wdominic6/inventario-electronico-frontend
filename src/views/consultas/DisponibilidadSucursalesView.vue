@@ -136,7 +136,7 @@ function goToKardex(productId) {
         <form class="branch-filter-bar" @submit.prevent="loadBranchStock">
           <select v-model="activeBranchId" aria-label="Seleccionar sucursal" @change="loadBranchStock">
             <option v-for="branch in store.branches" :key="branch.id" :value="String(branch.id)">
-              {{ branch.name }} ({{ branch.code }})
+              {{ branch.code ? `${branch.name} (${branch.code})` : branch.name }}
             </option>
           </select>
 
