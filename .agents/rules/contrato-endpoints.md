@@ -7,12 +7,10 @@ Todos los servicios del Frontend deben consumir exactamente las rutas expuestas 
 
 ## 1. Servicios de Carlos Daniel (UI/UX, Seguridad y Almacén)
 
-### A. `src/services/auth.service.js` y `src/services/usuarios.service.js` (Conecta con William)
+### A. `src/services/auth.service.js` (Conecta con William)
 - `api.post('/auth/login', { email, password })` → Recibe `{ data: { token, user } }` y guarda el token con `tokenStorage.set(res.data.token)`.
 - `api.post('/auth/logout')` → Limpia el token con `tokenStorage.clear()`.
 - `api.get('/auth/me')` → Obtiene `{ data: { id, name, email, role, branch_id, branch } }`.
-- `api.get('/users?...')`, `api.post('/users', payload)`, `api.put(\`/users/\${id}\`, payload)` → Gestión de usuarios (`admin`).
-- `api.get('/audit-logs?...')` → Historial de auditoría (`admin`).
 
 ### B. `src/services/catalogo.service.js` (Conecta con William)
 - **Sucursales**: `api.get('/branches')`, `api.post('/branches', body)`, `api.put(\`/branches/\${id}\`, body)`, `api.delete(\`/branches/\${id}\`)`.
@@ -54,9 +52,15 @@ Todos los servicios del Frontend deben consumir exactamente las rutas expuestas 
 
 ---
 
-## 2. Servicios de William Dominic (Consultas en Ventas y Reportes/Alertas)
+## 2. Servicios de William Dominic (Consultas en Ventas, Reportes/Alertas y Usuarios/Auditoría)
 
-### A. `src/services/consultas.service.js` (Conecta con Anthony)
+### A. `src/services/usuarios.service.js` (Conecta con William – `frontend#7`)
+- `api.get('/users?role=...&branch_id=...&is_active=...&q=...&page=...&per_page=...')`
+- `api.post('/users', { name, email, password, role, branch_id, is_active })`
+- `api.put(\`/users/\${id}\`, payload)` → Gestión de usuarios (`admin`; desactivar revoca tokens Sanctum).
+- `api.get('/audit-logs?user_id=...&action=...&date_from=...&date_to=...&page=...&per_page=...')` → Historial de auditoría (`admin`).
+
+### B. `src/services/consultas.service.js` (Conecta con Anthony)
 - `api.get('/stock/search?q=...&category_id=...&branch_id=...&package_type=...&voltage=...&only_available=...')`
   - Buscador rápido para personal de Ventas con filtros por especificaciones técnicas de componentes electrónicos.
 - `api.get(\`/stock/availability/\${productId}\`)`
@@ -64,7 +68,7 @@ Todos los servicios del Frontend deben consumir exactamente las rutas expuestas 
 - `api.get(\`/stock/by-branch/\${branchId}?q=...&category_id=...\`)`
   - Inventario detallado de una sucursal específica.
 
-### B. `src/services/reportes.service.js` (Conecta con Anthony)
+### C. `src/services/reportes.service.js` (Conecta con Anthony)
 - `api.get('/alerts/low-stock?branch_id=...&severity=...')`
   - Lista de componentes electrónicos que alcanzaron o bajaron de su `min_stock` (stock de seguridad).
 - `api.get('/reports/dashboard-summary')`
