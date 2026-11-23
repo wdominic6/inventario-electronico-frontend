@@ -93,7 +93,7 @@ function goToAuditLogs() {
 </script>
 
 <template>
-  <main class="view-page">
+  <section class="view-page">
     <SubnavVentasReportes
       title="Gestión de Usuarios y Control de Acceso (RBAC)"
       subtitle="Administración de cuentas de personal, asignación de roles (Administrador, Almacén, Ventas), sucursal operativa y activación/revocación de acceso (RF08)."
@@ -252,14 +252,14 @@ function goToAuditLogs() {
       @close="closeModal"
       @submit="handleModalSubmit"
     />
-  </main>
+  </section>
 </template>
 
 <style scoped>
 .view-page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;

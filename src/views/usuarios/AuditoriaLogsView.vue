@@ -78,7 +78,7 @@ function goToUsersManagement() {
 </script>
 
 <template>
-  <main class="view-page">
+  <section class="view-page">
     <SubnavVentasReportes
       title="Bitácora de Auditoría y Trazabilidad del Sistema"
       subtitle="Registro cronológico de accesos, cambios de usuarios, modificaciones de catálogo y operaciones de inventario con valores anteriores y posteriores (RF08)."
@@ -221,14 +221,14 @@ function goToUsersManagement() {
         </button>
       </div>
     </footer>
-  </main>
+  </section>
 </template>
 
 <style scoped>
 .view-page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;

@@ -1,5 +1,7 @@
 <script setup>
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useAuthStore } from '@/stores/auth.store'
 
 defineProps({
   title: {
@@ -17,6 +19,7 @@ defineProps({
 })
 
 const route = useRoute()
+const auth = useAuthStore()
 
 const navLinks = [
   {
@@ -24,50 +27,64 @@ const navLinks = [
     path: '/consultas/stock',
     label: 'Buscador Multicriterio',
     moduleBadge: 'Ventas',
+    roles: ['admin', 'almacen', 'ventas'],
   },
   {
     name: 'consultas.disponibilidad',
     path: '/consultas/disponibilidad',
     label: 'Disponibilidad Sucursales',
     moduleBadge: 'Ventas',
+    roles: ['admin', 'almacen', 'ventas'],
   },
   {
     name: 'reportes.dashboard',
     path: '/reportes/dashboard',
     label: 'Dashboard Gerencial',
     moduleBadge: 'Gerencia',
+    roles: ['admin'],
   },
   {
     name: 'reportes.alertas',
     path: '/reportes/alertas',
     label: 'Alertas Bajo Stock',
     moduleBadge: 'Alertas',
+    roles: ['admin', 'almacen', 'ventas'],
   },
   {
     name: 'reportes.rotacion',
     path: '/reportes/rotacion',
     label: 'Rotación ABC',
     moduleBadge: 'Reportes',
+    roles: ['admin'],
   },
   {
     name: 'reportes.kardex',
     path: '/reportes/kardex',
     label: 'Kardex de Producto',
     moduleBadge: 'Kardex',
+    roles: ['admin', 'almacen'],
   },
   {
     name: 'usuarios.index',
     path: '/usuarios',
     label: 'Usuarios RBAC',
     moduleBadge: 'Admin',
+    roles: ['admin'],
   },
   {
     name: 'usuarios.auditoria',
     path: '/usuarios/auditoria',
     label: 'Auditoría',
     moduleBadge: 'Admin',
+    roles: ['admin'],
   },
 ]
+
+const visibleNavLinks = computed(() => {
+  const role = auth.user?.role
+  if (!role) return []
+  return navLinks.filter((item) => item.roles.includes(role))
+})
 
 function isActive(item) {
   if (route.name === item.name || route.path === item.path) {
@@ -82,9 +99,13 @@ function isActive(item) {
 
 <template>
   <header class="module-header">
-    <nav class="subnav-tabs" aria-label="Navegación de Consultas y Reportes">
+    <nav
+      v-if="visibleNavLinks.length > 1"
+      class="subnav-tabs"
+      aria-label="Navegación de Consultas y Reportes"
+    >
       <RouterLink
-        v-for="item in navLinks"
+        v-for="item in visibleNavLinks"
         :key="item.name"
         :to="item.path"
         class="tab-link"

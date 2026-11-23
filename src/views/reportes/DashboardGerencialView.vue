@@ -38,7 +38,7 @@ function goToKardex(payload) {
 </script>
 
 <template>
-  <main class="view-page">
+  <section class="view-page">
     <SubnavVentasReportes
       title="Panel de Control y Resumen Ejecutivo (Dashboard Gerencial)"
       subtitle="Indicadores estratégicos de valorización de inventario, alertas tempranas de desabastecimiento y rotación de componentes (RF07)."
@@ -106,14 +106,14 @@ function goToKardex(payload) {
         />
       </section>
     </div>
-  </main>
+  </section>
 </template>
 
 <style scoped>
 .view-page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;

@@ -119,7 +119,7 @@ function applyPackagePreset(pkg) {
         <select id="stock-category" v-model="localFilters.category_id" @change="submitSearch">
           <option value="">Todas las categorías</option>
           <option v-for="cat in categories" :key="cat.id" :value="cat.id">
-            {{ cat.name }} ({{ cat.code_prefix }})
+            {{ cat.code_prefix ? `${cat.name} (${cat.code_prefix})` : cat.name }}
           </option>
         </select>
       </div>

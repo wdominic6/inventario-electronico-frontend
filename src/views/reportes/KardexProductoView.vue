@@ -75,7 +75,7 @@ function goToAvailability() {
 </script>
 
 <template>
-  <main class="view-page">
+  <section class="view-page">
     <SubnavVentasReportes
       title="Reporte Histórico de Kardex por Componente Electrónico"
       subtitle="Trazabilidad cronológica inmutable de entradas, salidas, ajustes y transferencias con saldo anterior, saldo resultante y ubicación física (RF04, RF07)."
@@ -213,14 +213,14 @@ function goToAvailability() {
         </button>
       </div>
     </footer>
-  </main>
+  </section>
 </template>
 
 <style scoped>
 .view-page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;

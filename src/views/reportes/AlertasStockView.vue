@@ -47,7 +47,7 @@ function goToKardex(alertItem) {
 </script>
 
 <template>
-  <main class="view-page">
+  <section class="view-page">
     <SubnavVentasReportes
       title="Alertas Automáticas de Bajo Stock y Quiebre de Inventario"
       subtitle="Monitoreo de componentes electrónicos cuyo saldo actual es menor o igual al parámetro stock_minimo configurado por sucursal (RF07)."
@@ -154,14 +154,14 @@ function goToKardex(alertItem) {
         </button>
       </div>
     </footer>
-  </main>
+  </section>
 </template>
 
 <style scoped>
 .view-page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
