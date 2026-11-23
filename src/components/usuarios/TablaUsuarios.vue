@@ -148,12 +148,12 @@ function formatLastAccess(isoDate) {
 .users-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
 
 .users-table th,
 .users-table td {
-  padding: 0.75rem 0.9rem;
+  padding: 0.65rem 0.7rem;
   border-bottom: 1px solid #f1f5f9;
   text-align: left;
   vertical-align: middle;
@@ -253,7 +253,7 @@ function formatLastAccess(isoDate) {
 .date-cell {
   white-space: nowrap;
   color: #475569;
-  font-size: 0.8125rem;
+  font-size: 0.78rem;
 }
 
 .text-right {
@@ -264,12 +264,12 @@ function formatLastAccess(isoDate) {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 
 .action-btn {
-  padding: 0.3rem 0.6rem;
-  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.73rem;
   font-weight: 600;
   border-radius: 0.375rem;
   cursor: pointer;

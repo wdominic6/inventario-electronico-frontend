@@ -59,7 +59,7 @@ function goToAvailability(productId) {
 </script>
 
 <template>
-  <main class="view-page">
+  <section class="view-page">
     <SubnavVentasReportes
       title="Reporte de Rotación de Inventario y Clasificación ABC"
       subtitle="Análisis de componentes electrónicos de mayor y menor movimiento por sucursal y rango de fechas para decisiones de abastecimiento (RF07)."
@@ -175,14 +175,14 @@ function goToAvailability(productId) {
         </button>
       </div>
     </footer>
-  </main>
+  </section>
 </template>
 
 <style scoped>
 .view-page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;

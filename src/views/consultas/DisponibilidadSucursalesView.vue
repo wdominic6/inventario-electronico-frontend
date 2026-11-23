@@ -76,7 +76,7 @@ function goToKardex(productId) {
 </script>
 
 <template>
-  <main class="view-page">
+  <section class="view-page">
     <SubnavVentasReportes
       title="Disponibilidad Cruzada entre Sucursales y Estanterías"
       subtitle="Verificación en tiempo real de existencias por sede, estante (shelf), nivel (level) y casillero (bin) para atención de pedidos sin sobreventas."
@@ -228,14 +228,14 @@ function goToKardex(productId) {
         </table>
       </div>
     </section>
-  </main>
+  </section>
 </template>
 
 <style scoped>
 .view-page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
